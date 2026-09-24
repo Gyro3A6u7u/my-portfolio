@@ -37,16 +37,15 @@ function App() {
     };
   }, []);
 
-  // Aapke bataye hue exact sequence ke mutabiq skills
   const skills = [
-    { name: "C", level: "Advanced", icon: "💻" },
-    { name: "C++", level: "Advanced", icon: "🚀" },
-    { name: "Java", level: "Advanced", icon: "☕" },
-    { name: "HTML", level: "Advanced", icon: "🌐" },
-    { name: "CSS", level: "Advanced", icon: "🎨" },
+    { name: "C", level: "Intermediate", icon: "💻" },
+    { name: "C++", level: "Intermediate", icon: "🚀" },
+    { name: "Java", level: "Intermediate", icon: "☕" },
+    { name: "HTML", level: "Intermediate", icon: "🌐" },
+    { name: "CSS", level: "Intermediate", icon: "🎨" },
     { name: "JavaScript", level: "Intermediate", icon: "⚡" },
     { name: "React", level: "Intermediate", icon: "⚛️" },
-    { name: "Bootstrap", level: "Advanced", icon: "🎯" },
+    { name: "Bootstrap", level: "Intermediate", icon: "🎯" },
     { name: "PHP", level: "Intermediate", icon: "🐘" },
     { name: "MySQL", level: "Intermediate", icon: "🗄️" },
     { name: "Android", level: "Intermediate", icon: "📱" },
@@ -79,7 +78,7 @@ function App() {
       </AnimatePresence>
 
       <div className="app">
-        {/* NAVBAR */}
+        {/* NAVBAR (Contact link restored as requested) */}
         <nav className="navbar">
           <div className="logo">
             N<span>.</span>
@@ -94,7 +93,7 @@ function App() {
           </div>
         </nav>
 
-        {/* HERO */}
+        {/* HERO SECTION */}
         <section id="home" className="hero">
           <motion.div
             className="hero-left"
@@ -134,7 +133,7 @@ function App() {
             </div>
           </motion.div>
 
-          {/* HERO RIGHT (REAL IMAGE & CODE CARD) */}
+          {/* HERO RIGHT */}
           <motion.div
             className="hero-right"
             initial={{ opacity: 0, scale: 0.8 }}
@@ -149,28 +148,24 @@ function App() {
               />
             </div>
 
-            <div className="code-card">
+            <div className="code-card" style={{ background: "linear-gradient(135deg, rgba(20,20,30,0.9), rgba(40,20,60,0.8))", border: "1px solid rgba(255,255,255,0.15)" }}>
               <div className="code-header">
-                <span></span>
-                <span></span>
-                <span></span>
+                <span style={{ background: "#ff5f56" }}></span>
+                <span style={{ background: "#ffbd2e" }}></span>
+                <span style={{ background: "#27c93f" }}></span>
               </div>
 
-              <div className="code-body">
-                <p>
-                  <span className="purple">const</span> developer = {"{"}
+              <div className="code-body" style={{ padding: "16px", textAlign: "center" }}>
+                <div style={{ display: "flex", justifyContent: "space-around", marginBottom: "12px" }}>
+                  <span style={{ fontSize: "24px" }} title="Web Development">🌐</span>
+                  <span style={{ fontSize: "24px" }} title="Android Development">📱</span>
+                  <span style={{ fontSize: "24px" }} title="Database">🗄️</span>
+                  <span style={{ fontSize: "24px" }} title="Problem Solving">⚡</span>
+                </div>
+                <h4 style={{ color: "#fff", fontSize: "16px", marginBottom: "4px" }}>Engineering Digital Excellence</h4>
+                <p style={{ color: "#bbb", fontSize: "12px", margin: 0 }}>
+                  Crafting high-speed web apps & seamless mobile solutions.
                 </p>
-                <p>
-                  &nbsp;&nbsp;name: <span className="green">"Naman Yadav"</span>,
-                </p>
-                <p>
-                  &nbsp;&nbsp;role: <span className="green">"Full Stack & Android"</span>,
-                </p>
-                <p>
-                  &nbsp;&nbsp;skills: <span className="green">["C", "C++", "Java", "React"]</span>
-                </p>
-                <p>{"};"}</p>
-                <p className="cursor">|</p>
               </div>
             </div>
           </motion.div>
@@ -196,13 +191,14 @@ function App() {
             viewport={{ once: true }}
           >
             <div>
-              <h3>Building robust ideas into high-performance applications.</h3>
+              <h3>Driven by curiosity and a passion for clean architecture.</h3>
               <p>
-                I am a passionate developer with a strong foundation in both web and mobile app development. 
-                I enjoy solving complex problems and turning creative ideas into functional digital reality.
+                I am Naman Yadav, a dedicated Full Stack Web and Android App Developer based in Gwalior. 
+                My journey in technology revolves around building seamless applications that bridge the gap between design and robust backend logic.
               </p>
               <p>
-                Always eager to learn new stacks, optimize backend systems, and craft seamless user interfaces.
+                Whether it's structuring database workflows, optimizing web performance, or engineering responsive mobile solutions, 
+                I love turning conceptual challenges into production-ready software.
               </p>
             </div>
 
@@ -304,21 +300,49 @@ function App() {
         </section>
 
         {/* CONTACT */}
-        <section id="contact" className="contact">
+        <section id="contact" className="section">
+          <div className="heading">
+            <p>GET IN TOUCH</p>
+            <h2>
+              Contact <span>Me</span>
+            </h2>
+          </div>
+
           <motion.div
             className="contact-box"
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
+            style={{ maxWidth: "600px", margin: "0 auto", textAlign: "left" }}
           >
-            <p>HAVE A PROJECT IN MIND?</p>
-            <h2>
-              Let's build something <span>amazing.</span>
-            </h2>
-            <p>I'm always interested in collaborating and building high-impact technological solutions.</p>
-            <a href="https://mail.google.com/mail/?view=cm&to=naman650yadav@gmail.com" target="_blank" rel="noreferrer" className="primary-btn">
-              Send Email ✉
-            </a>
+            <p style={{ textAlign: "center", marginBottom: "20px" }}>Have a project in mind or want to connect? Drop a message below!</p>
+            
+            <form 
+              action="https://api.web3forms.com/submit" 
+              method="POST" 
+              style={{ display: "flex", flexDirection: "column", gap: "15px" }}
+            >
+              <input type="hidden" name="access_key" value="bbf109f4-4f7d-4744-8784-2dceb23e93a7" />
+
+              <div>
+                <label style={{ display: "block", marginBottom: "5px", color: "#ccc", fontSize: "14px" }}>Your Name</label>
+                <input type="text" name="name" placeholder="Enter your name" required style={{ width: "100%", padding: "12px", background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: "8px", color: "#fff", outline: "none" }} />
+              </div>
+
+              <div>
+                <label style={{ display: "block", marginBottom: "5px", color: "#ccc", fontSize: "14px" }}>Your Email</label>
+                <input type="email" name="email" placeholder="Enter your email" required style={{ width: "100%", padding: "12px", background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: "8px", color: "#fff", outline: "none" }} />
+              </div>
+
+              <div>
+                <label style={{ display: "block", marginBottom: "5px", color: "#ccc", fontSize: "14px" }}>Your Message</label>
+                <textarea name="message" rows="4" placeholder="Type your message here..." required style={{ width: "100%", padding: "12px", background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: "8px", color: "#fff", outline: "none", resize: "vertical" }}></textarea>
+              </div>
+
+              <button type="submit" className="primary-btn" style={{ width: "100%", border: "none", cursor: "pointer", textAlign: "center", marginTop: "10px" }}>
+                Send Message ✉
+              </button>
+            </form>
           </motion.div>
         </section>
 
